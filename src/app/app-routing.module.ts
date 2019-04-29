@@ -1,10 +1,27 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { QuoteComponent } from './quotes/quotes.component';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { StrikethroughDirective } from './strikethrough.directive';
+import { DateCountPipe } from './date-count.pipe';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [
+    AppComponent,
+    QuoteComponent,
+    QuoteDetailsComponent,
+    StrikethroughDirective,
+    DateCountPipe,
+    QuoteFormComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppRoutingModule { }
+export class AppModule { }
