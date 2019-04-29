@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Jura|Niconne|Russo+One|Viga" rel="stylesheet">
+
+<h2 style="font-family: 'Viga', sans-serif;" >{{quote.description}}</h2>
+
+<h3 style="font-family: 'Niconne', cursive;">This Quote was submitted {{quote.completeDate|dateCount}} days ago</h3>
+
+<!-- Like Section -->
+
+    <button class=" btn btn-info" (click)='voteUp()' type="submit">
+      <span class="glyphicon glyphicon-thumbs-u" aria-hidden="true"></span>
+    
+      <span class="badge">{{upvote}} Likes</span>
+    </button>
+    
+    <button (click)='voteDown()' class="btn btn-info" type="submit">
+    
+      <span class="badge">{{downvote}} Dislikes</span>
+    </button>
+
+<!--Collapse Like Section -->
+
+<!-- Delete Button to delete quote -->
+<div style="width: 20%;">
+  <a href="#" class="btn btn-sm animated-button victoria-one" (click)='quoteDelete(true)'>Delete Quote</a>
+</div>
+<!-- Collapse Delete button -->
