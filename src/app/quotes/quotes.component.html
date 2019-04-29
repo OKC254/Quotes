@@ -1,0 +1,21 @@
+<h1 class="quotesheader">My Quotes</h1>
+
+<hr>
+
+<div style="margin-left: 15%;" class="content">
+  <div class="row">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
+
+  <div *ngFor='let quote of Quotes;let i = index'>
+      <h3 style="font-family: 'Jura', sans-serif;" id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
+      
+      <!-- Toggle Button -->
+      <div style="width: 130px;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)'>TOOGLE</a> </div>
+      
+      <div class="row" *ngIf="quote.showDescription">
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+      </div>
+  </div>
+</div>
+<p *ngIf='Quotes.length> 5'>This is the End of Quotes</p>
