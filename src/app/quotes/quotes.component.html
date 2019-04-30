@@ -12,7 +12,7 @@
         <h3 style="font-family: 'Jura', sans-serif;" id="{{i}}" appStrikethrough><strong>{{quote.name}}</strong> submitted on: {{quote.completeDate|date|uppercase}}</h3>
         
         <!-- Toggle Button -->
-        <div style="width: 130px;">  <a href="#" class="btn btn-sm animated-button thar-one" (click)='toggleDetails(i)'>TOGGLE</a> </div>
+        <div style="width: 130px;">  <button href="#" class="btn" (click)='toggleDetails(i)'>TOGGLE</button> </div>
         
         <div class="row" *ngIf="quote.showDescription">
           <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
