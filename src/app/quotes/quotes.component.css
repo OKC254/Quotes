@@ -1,0 +1,16 @@
+.quotesheader{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    background-image: url('../../assets/img/li.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: darkblue;
+}
+.quotes{
+    border: 5px solid black;
+    align-self: center;
+}
